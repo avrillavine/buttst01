@@ -1,19 +1,19 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="1" inline="false" x="-61" y="-120">
-    <field name="MODE">UNTIL</field>
-    <value name="NUMBER">
-      <block type="sensor_button" id="2">
-        <field name="OBJECT">ENTER</field>
+  <block type="controls_if" id="187" inline="false" x="-49" y="-146">
+    <value name="IF0">
+      <block type="sensor_object" id="154">
+        <field name="OBJECT">REAR</field>
       </block>
     </value>
-    <statement name="DO">
-      <block type="controls_if" id="187" inline="false">
-        <value name="IF0">
-          <block type="sensor_object" id="154">
-            <field name="OBJECT">REAR</field>
+    <next>
+      <block type="controls_whileUntil" id="1" inline="false">
+        <field name="MODE">UNTIL</field>
+        <value name="NUMBER">
+          <block type="sensor_button" id="2">
+            <field name="OBJECT">ENTER</field>
           </block>
         </value>
-        <next>
+        <statement name="DO">
           <block type="movement_forward" id="91">
             <next>
               <block type="robot_delay" id="40" inline="true">
@@ -67,8 +67,8 @@
               </block>
             </next>
           </block>
-        </next>
+        </statement>
       </block>
-    </statement>
+    </next>
   </block>
 </xml>
