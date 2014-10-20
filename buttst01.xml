@@ -7,17 +7,17 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="led_select" id="20" inline="true">
+      <block type="led_select" id="3" inline="true">
         <field name="ACTION">FLASH</field>
         <value name="LED">
-          <block type="math_number" id="27">
+          <block type="math_number" id="4">
             <field name="NUM">0</field>
           </block>
         </value>
         <next>
-          <block type="robot_delay" id="4" inline="true">
+          <block type="robot_delay" id="5" inline="true">
             <value name="DELAY">
-              <block type="math_number" id="11">
+              <block type="math_number" id="6">
                 <field name="NUM">250</field>
               </block>
             </value>
