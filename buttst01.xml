@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="1" inline="false" x="-49" y="-102">
+  <block type="controls_whileUntil" id="1" inline="false" x="-56" y="-102">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="2">
@@ -23,24 +23,24 @@
                     <field name="OBJECT">LEFTFRONT</field>
                   </block>
                 </value>
-                <next>
-                  <block type="movement_stop" id="322">
+                <statement name="DO0">
+                  <block type="movement_stop" id="426">
                     <next>
-                      <block type="oled_cleardisplay" id="355">
+                      <block type="oled_cleardisplay" id="427">
                         <next>
-                          <block type="oled_drawtext" id="245">
+                          <block type="oled_drawtext" id="428">
                             <field name="TEXT">Stop it</field>
                             <next>
-                              <block type="movement_right" id="365">
+                              <block type="movement_right" id="429">
                                 <next>
-                                  <block type="robot_delay" id="366" inline="true">
+                                  <block type="robot_delay" id="430" inline="true">
                                     <value name="DELAY">
-                                      <block type="math_number" id="367">
+                                      <block type="math_number" id="431">
                                         <field name="NUM">250</field>
                                       </block>
                                     </value>
                                     <next>
-                                      <block type="movement_forward" id="401"></block>
+                                      <block type="movement_forward" id="432"></block>
                                     </next>
                                   </block>
                                 </next>
@@ -51,7 +51,30 @@
                       </block>
                     </next>
                   </block>
-                </next>
+                </statement>
+                <statement name="ELSE">
+                  <block type="controls_whileUntil" id="419" inline="false">
+                    <field name="MODE">UNTIL</field>
+                    <value name="NUMBER">
+                      <block type="sensor_button" id="420">
+                        <field name="OBJECT">ENTER</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="movement_forward" id="421">
+                        <next>
+                          <block type="robot_delay" id="422" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="423">
+                                <field name="NUM">250</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
               </block>
             </next>
           </block>
